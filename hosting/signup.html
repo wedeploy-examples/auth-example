@@ -5,9 +5,10 @@
 	<title>Sign Up</title>
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,700">
 	<link rel="stylesheet" href="main.css">
+	<script src="http://cdn.wedeploy.com/api/latest/wedeploy.js"></script>
 </head>
 <body>
-	<form action="" class="container">
+	<form name="signUp" class="container" onsubmit="submitForm(); return false;">
 		<h1>Sign Up</h1>
 		<input name="name" type="text" placeholder="Name" required>
 		<input name="email" type="email" placeholder="Email" required>
@@ -18,5 +19,26 @@
 	</form>
 
 	<img class="logo" src="logo.png" width="150" alt="WeDeploy">
+
+	<script>
+		function submitForm() {
+			WeDeploy.url('auth.authdemo.wedeploy.me/users')
+				.post({
+					email: signUp.email.value,
+					name: signUp.name.value,
+					password: signUp.password.value
+				})
+				.then(function(response) {
+					if (response.succeeded()) {
+						alert('Sign-up successfully.');
+						location.href = '/';
+					}
+					else {
+						alert('Sign-up failed. Try another email.');
+						signUp.reset();
+					}
+				});
+		}
+	</script>
 </body>
 </html>

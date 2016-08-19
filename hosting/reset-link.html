@@ -5,9 +5,10 @@
 	<title>Request a Reset Password Link</title>
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,700">
 	<link rel="stylesheet" href="main.css">
+	<script src="http://cdn.wedeploy.com/api/latest/wedeploy.js"></script>
 </head>
 <body>
-	<form action="" class="container">
+	<form name="resetLink" class="container" onsubmit="submitForm(); return false;">
 		<h1>Request a Reset Password Link</h1>
 		<input name="email" type="email" placeholder="Email" required>
 
@@ -16,5 +17,20 @@
 	</form>
 
 	<img class="logo" src="logo.png" width="150" alt="WeDeploy">
+
+	<script>
+		function submitForm() {
+			WeDeploy.auth('auth.authdemo.wedeploy.me')
+				.sendPasswordResetEmail(resetLink.email.value)
+				.then(function() {
+					alert('Reset password link was sent to ' + resetLink.email.value);
+					resetLink.reset();
+				})
+				.catch(function() {
+					alert('Reset password link was not sent.');
+					resetLink.reset();
+				});
+		}
+	</script>
 </body>
 </html>
