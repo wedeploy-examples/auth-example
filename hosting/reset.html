@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Reset Password</title>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,700">
+	<link rel="stylesheet" href="main.css">
+</head>
+<body>
+	<form action="/auth/reset?redirect=success.html&errorRedirect=error.html" class="container">
+		<input name="code" type="hidden">
+		<input name="email" type="hidden">
+
+		<h1>Reset Password</h1>
+		<input type="password" placeholder="New Password" required>
+		<button type="submit">Submit</button>
+	</form>
+
+	<img class="logo" src="https://cloud.githubusercontent.com/assets/398893/16279177/af9b3622-386e-11e6-920e-3a3f33169831.png" width="150" alt="WeDeploy">
+
+	<script>
+		var form = document.querySelector('form');
+
+		form.code.value = getCodeFromURL(window.location.search);
+		form.email.value = getEmailFromURL(window.location.search);
+
+		function getEmailFromURL(queryString) {
+			var lastEquals  = queryString.lastIndexOf('=');
+
+			return queryString.substring(lastEquals + 1, queryString.length);
+		}
+
+		function getCodeFromURL(queryString) {
+			var firstEquals = queryString.indexOf('=');
+			var andOperator = queryString.indexOf('&');
+
+			return queryString.substring(firstEquals + 1, andOperator);
+		}
+	</script>
+</body>
+</html>
