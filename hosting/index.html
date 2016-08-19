@@ -8,7 +8,30 @@
 	<script src="http://cdn.wedeploy.com/api/latest/wedeploy.js"></script>
 </head>
 <body>
-	<form name="signIn" class="container" onsubmit="submitForm(); return false;">
+	<form name="signIn" class="container" onsubmit="signInWithEmailAndPassword(); return false;">
+		<div class="btn-container">
+			
+			<!--
+				To enable login with Github/Google setup the following environment variables inside auth/container.json:
+					WEDEPLOY_AUTH_GITHUB_CLIENT_ID, WEDEPLOY_AUTH_GITHUB_CLIENT_SECRET
+					WEDEPLOY_AUTH_GOOGLE_CLIENT_ID, WEDEPLOY_AUTH_GOOGLE_CLIENT_SECRET
+			-->
+
+			<button class="btn btn-social btn-github" type="button" onclick="signInWithGithub();">
+				<span class="brand">
+					<span class="icon icon-github"></span>
+				</span>
+				<span class="label">Login with Github</span>
+			</button>
+
+			<button class="btn btn-social btn-google" type="button" onclick="signInWithGoogle();">
+				<span class="brand">
+					<span class="icon icon-google"></span>
+				</span>
+				<span class="label">Login with Google</span>
+			</button>
+		</div>
+
 		<h1>Sign In</h1>
 		<input name="email" type="email" placeholder="Email" required>
 		<input name="password" type="password" placeholder="Password" required>
@@ -21,9 +44,10 @@
 	<img class="logo" src="logo.png" width="150" alt="WeDeploy">
 
 	<script>
-		function submitForm() {
-			WeDeploy.auth('auth.authdemo.wedeploy.me')
-				.signInWithEmailAndPassword(signIn.email.value, signIn.password.value)
+		var auth = WeDeploy.auth('auth.authdemo.wedeploy.me');
+
+		function signInWithEmailAndPassword() {
+			auth.signInWithEmailAndPassword(signIn.email.value, signIn.password.value)
 				.then(function() {
 					alert('Sign-in successfully.');
 					signIn.reset();
@@ -33,6 +57,22 @@
 					signIn.reset();
 				});
 		}
+
+		function signInWithGithub() {
+			var githubProvider = new auth.provider.Github();
+			githubProvider.setProviderScope('user:email');
+			auth.signInWithRedirect(githubProvider);
+		}
+
+		function signInWithGoogle() {
+			var googleProvider = new auth.provider.Google();
+			googleProvider.setProviderScope('email');
+			auth.signInWithRedirect(googleProvider);
+		}
+
+		auth.onSignIn(function(user) {
+			console.log('Signed-in', user);
+		});
 	</script>
 </body>
 </html>
