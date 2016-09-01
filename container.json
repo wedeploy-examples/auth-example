@@ -1,6 +1,5 @@
 {
 	"id": "auth",
-	"name": "Auth",
 	"type": "wedeploy/auth",
 	"env": {
 		"WEDEPLOY_AUTH_PASSWORD": "true",
