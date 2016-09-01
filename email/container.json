@@ -1,5 +1,4 @@
 {
 	"id": "email",
-	"name": "Email",
 	"type": "wedeploy/email"
 }
