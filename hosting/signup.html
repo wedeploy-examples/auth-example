@@ -22,21 +22,19 @@
 
 	<script>
 		function submitForm() {
-			WeDeploy.url('auth.authdemo.wedeploy.me/users')
-				.post({
+			WeDeploy.auth('auth.authdemo.wedeploy.me')
+				.createUser({
 					email: signUp.email.value,
 					name: signUp.name.value,
 					password: signUp.password.value
 				})
-				.then(function(response) {
-					if (response.succeeded()) {
-						alert('Sign-up successfully.');
-						location.href = '/';
-					}
-					else {
-						alert('Sign-up failed. Try another email.');
-						signUp.reset();
-					}
+				.then(function(user) {
+					alert('Sign-up successfully.');
+					location.href = '/';
+				})
+				.catch(function() {
+					alert('Sign-up failed. Try another email.');
+					signUp.reset();
 				});
 		}
 	</script>
