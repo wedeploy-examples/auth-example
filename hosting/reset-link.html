@@ -20,7 +20,7 @@
 
 	<script>
 		function submitForm() {
-			WeDeploy.auth('auth.authdemo.wedeploy.me')
+			WeDeploy.auth('auth.boilerplate-auth.wedeploy.io')
 				.sendPasswordResetEmail(resetLink.email.value)
 				.then(function() {
 					alert('Reset password link was sent to ' + resetLink.email.value);
