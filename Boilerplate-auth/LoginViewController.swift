@@ -61,7 +61,6 @@ class LoginViewController: BaseViewController {
 		
 		WeDeploy.auth(authUrl)
 			.signInWithRedirect(provider: provider) { auth, error in
-				print("entro aqui")
 				self.handleLoginResult(auth: auth, error: error)
 			}
 	}
