@@ -8,10 +8,26 @@
 
 /* Begin PBXBuildFile section */
 		572DE6EE1E9B6F2E00FA6017 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 572DE6ED1E9B6F2E00FA6017 /* AppDelegate.swift */; };
-		572DE6F01E9B6F2E00FA6017 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 572DE6EF1E9B6F2E00FA6017 /* ViewController.swift */; };
+		572DE6F01E9B6F2E00FA6017 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 572DE6EF1E9B6F2E00FA6017 /* LoginViewController.swift */; };
 		572DE6F31E9B6F2E00FA6017 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 572DE6F11E9B6F2E00FA6017 /* Main.storyboard */; };
 		572DE6F51E9B6F2E00FA6017 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 572DE6F41E9B6F2E00FA6017 /* Assets.xcassets */; };
 		572DE6F81E9B6F2E00FA6017 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 572DE6F61E9B6F2E00FA6017 /* LaunchScreen.storyboard */; };
+		572DE7061E9B716700FA6017 /* loop_icons_12px.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 572DE7011E9B716700FA6017 /* loop_icons_12px.ttf */; };
+		572DE7071E9B716700FA6017 /* loop_icons_16px.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 572DE7021E9B716700FA6017 /* loop_icons_16px.ttf */; };
+		572DE7081E9B716700FA6017 /* rene_bieder_galano_grotesque_bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 572DE7031E9B716700FA6017 /* rene_bieder_galano_grotesque_bold.otf */; };
+		572DE7091E9B716700FA6017 /* rene_bieder_galano_grotesque_medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 572DE7041E9B716700FA6017 /* rene_bieder_galano_grotesque_medium.otf */; };
+		572DE70A1E9B716700FA6017 /* rene_bieder_galano_grotesque_semibold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 572DE7051E9B716700FA6017 /* rene_bieder_galano_grotesque_semibold.otf */; };
+		572DE70C1E9B71B200FA6017 /* WeTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 572DE70B1E9B71B200FA6017 /* WeTextField.swift */; };
+		572DE70E1E9B71BE00FA6017 /* WeColorButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 572DE70D1E9B71BE00FA6017 /* WeColorButton.swift */; };
+		572DE7101E9B71C400FA6017 /* WeProviderButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 572DE70F1E9B71C400FA6017 /* WeProviderButton.swift */; };
+		572DE7151E9B720600FA6017 /* WeColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 572DE7121E9B720600FA6017 /* WeColors.swift */; };
+		572DE7161E9B720600FA6017 /* WeFonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 572DE7131E9B720600FA6017 /* WeFonts.swift */; };
+		572DE7171E9B720600FA6017 /* WeIcons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 572DE7141E9B720600FA6017 /* WeIcons.swift */; };
+		572DE7191E9B758C00FA6017 /* SpanButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 572DE7181E9B758C00FA6017 /* SpanButton.swift */; };
+		57C0AF591E9B7A20003E34ED /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57C0AF581E9B7A20003E34ED /* BaseViewController.swift */; };
+		57ED47F11E9B820A00B4D097 /* ResetPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57ED47F01E9B820A00B4D097 /* ResetPasswordViewController.swift */; };
+		57ED47F31E9B82F100B4D097 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57ED47F21E9B82F100B4D097 /* SignUpViewController.swift */; };
+		57ED47F51E9B85B100B4D097 /* WeBackButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57ED47F41E9B85B100B4D097 /* WeBackButton.swift */; };
 		EDDF5ECBCFA20D71F9B0E376 /* Pods_Boilerplate_auth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2FB7BD4732C246401B4E463 /* Pods_Boilerplate_auth.framework */; };
 /* End PBXBuildFile section */
 
@@ -20,11 +36,27 @@
 		512F9DFC2049F73B407319F9 /* Pods-Boilerplate-auth.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Boilerplate-auth.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Boilerplate-auth/Pods-Boilerplate-auth.debug.xcconfig"; sourceTree = "<group>"; };
 		572DE6EA1E9B6F2E00FA6017 /* Boilerplate-auth.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Boilerplate-auth.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		572DE6ED1E9B6F2E00FA6017 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		572DE6EF1E9B6F2E00FA6017 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		572DE6EF1E9B6F2E00FA6017 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		572DE6F21E9B6F2E00FA6017 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		572DE6F41E9B6F2E00FA6017 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		572DE6F71E9B6F2E00FA6017 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		572DE6F91E9B6F2E00FA6017 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		572DE7011E9B716700FA6017 /* loop_icons_12px.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = loop_icons_12px.ttf; sourceTree = "<group>"; };
+		572DE7021E9B716700FA6017 /* loop_icons_16px.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = loop_icons_16px.ttf; sourceTree = "<group>"; };
+		572DE7031E9B716700FA6017 /* rene_bieder_galano_grotesque_bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = rene_bieder_galano_grotesque_bold.otf; sourceTree = "<group>"; };
+		572DE7041E9B716700FA6017 /* rene_bieder_galano_grotesque_medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = rene_bieder_galano_grotesque_medium.otf; sourceTree = "<group>"; };
+		572DE7051E9B716700FA6017 /* rene_bieder_galano_grotesque_semibold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = rene_bieder_galano_grotesque_semibold.otf; sourceTree = "<group>"; };
+		572DE70B1E9B71B200FA6017 /* WeTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeTextField.swift; sourceTree = "<group>"; };
+		572DE70D1E9B71BE00FA6017 /* WeColorButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeColorButton.swift; sourceTree = "<group>"; };
+		572DE70F1E9B71C400FA6017 /* WeProviderButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeProviderButton.swift; sourceTree = "<group>"; };
+		572DE7121E9B720600FA6017 /* WeColors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeColors.swift; sourceTree = "<group>"; };
+		572DE7131E9B720600FA6017 /* WeFonts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeFonts.swift; sourceTree = "<group>"; };
+		572DE7141E9B720600FA6017 /* WeIcons.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeIcons.swift; sourceTree = "<group>"; };
+		572DE7181E9B758C00FA6017 /* SpanButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpanButton.swift; sourceTree = "<group>"; };
+		57C0AF581E9B7A20003E34ED /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		57ED47F01E9B820A00B4D097 /* ResetPasswordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResetPasswordViewController.swift; sourceTree = "<group>"; };
+		57ED47F21E9B82F100B4D097 /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		57ED47F41E9B85B100B4D097 /* WeBackButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeBackButton.swift; sourceTree = "<group>"; };
 		B2FB7BD4732C246401B4E463 /* Pods_Boilerplate_auth.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Boilerplate_auth.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -70,14 +102,54 @@
 		572DE6EC1E9B6F2E00FA6017 /* Boilerplate-auth */ = {
 			isa = PBXGroup;
 			children = (
+				572DE7111E9B71D100FA6017 /* Views */,
+				572DE6FF1E9B716700FA6017 /* Resources */,
 				572DE6ED1E9B6F2E00FA6017 /* AppDelegate.swift */,
-				572DE6EF1E9B6F2E00FA6017 /* ViewController.swift */,
+				572DE6EF1E9B6F2E00FA6017 /* LoginViewController.swift */,
 				572DE6F11E9B6F2E00FA6017 /* Main.storyboard */,
 				572DE6F41E9B6F2E00FA6017 /* Assets.xcassets */,
 				572DE6F61E9B6F2E00FA6017 /* LaunchScreen.storyboard */,
 				572DE6F91E9B6F2E00FA6017 /* Info.plist */,
+				57C0AF581E9B7A20003E34ED /* BaseViewController.swift */,
+				57ED47F01E9B820A00B4D097 /* ResetPasswordViewController.swift */,
+				57ED47F21E9B82F100B4D097 /* SignUpViewController.swift */,
 			);
 			path = "Boilerplate-auth";
+			sourceTree = "<group>";
+		};
+		572DE6FF1E9B716700FA6017 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				572DE7001E9B716700FA6017 /* Fonts */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		572DE7001E9B716700FA6017 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				572DE7011E9B716700FA6017 /* loop_icons_12px.ttf */,
+				572DE7021E9B716700FA6017 /* loop_icons_16px.ttf */,
+				572DE7031E9B716700FA6017 /* rene_bieder_galano_grotesque_bold.otf */,
+				572DE7041E9B716700FA6017 /* rene_bieder_galano_grotesque_medium.otf */,
+				572DE7051E9B716700FA6017 /* rene_bieder_galano_grotesque_semibold.otf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		572DE7111E9B71D100FA6017 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				57ED47F41E9B85B100B4D097 /* WeBackButton.swift */,
+				572DE7121E9B720600FA6017 /* WeColors.swift */,
+				572DE7131E9B720600FA6017 /* WeFonts.swift */,
+				572DE7141E9B720600FA6017 /* WeIcons.swift */,
+				572DE70F1E9B71C400FA6017 /* WeProviderButton.swift */,
+				572DE70B1E9B71B200FA6017 /* WeTextField.swift */,
+				572DE70D1E9B71BE00FA6017 /* WeColorButton.swift */,
+				572DE7181E9B758C00FA6017 /* SpanButton.swift */,
+			);
+			name = Views;
 			sourceTree = "<group>";
 		};
 		C0B856C6D6483A59FAEBCF8B /* Frameworks */ = {
@@ -151,8 +223,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				572DE6F81E9B6F2E00FA6017 /* LaunchScreen.storyboard in Resources */,
+				572DE70A1E9B716700FA6017 /* rene_bieder_galano_grotesque_semibold.otf in Resources */,
 				572DE6F51E9B6F2E00FA6017 /* Assets.xcassets in Resources */,
+				572DE7061E9B716700FA6017 /* loop_icons_12px.ttf in Resources */,
+				572DE7071E9B716700FA6017 /* loop_icons_16px.ttf in Resources */,
 				572DE6F31E9B6F2E00FA6017 /* Main.storyboard in Resources */,
+				572DE7081E9B716700FA6017 /* rene_bieder_galano_grotesque_bold.otf in Resources */,
+				572DE7091E9B716700FA6017 /* rene_bieder_galano_grotesque_medium.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -211,8 +288,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				572DE6F01E9B6F2E00FA6017 /* ViewController.swift in Sources */,
+				57ED47F51E9B85B100B4D097 /* WeBackButton.swift in Sources */,
+				572DE7171E9B720600FA6017 /* WeIcons.swift in Sources */,
+				572DE7101E9B71C400FA6017 /* WeProviderButton.swift in Sources */,
+				572DE6F01E9B6F2E00FA6017 /* LoginViewController.swift in Sources */,
+				57ED47F11E9B820A00B4D097 /* ResetPasswordViewController.swift in Sources */,
+				572DE7161E9B720600FA6017 /* WeFonts.swift in Sources */,
+				572DE70E1E9B71BE00FA6017 /* WeColorButton.swift in Sources */,
+				57ED47F31E9B82F100B4D097 /* SignUpViewController.swift in Sources */,
+				57C0AF591E9B7A20003E34ED /* BaseViewController.swift in Sources */,
+				572DE70C1E9B71B200FA6017 /* WeTextField.swift in Sources */,
+				572DE7191E9B758C00FA6017 /* SpanButton.swift in Sources */,
 				572DE6EE1E9B6F2E00FA6017 /* AppDelegate.swift in Sources */,
+				572DE7151E9B720600FA6017 /* WeColors.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -376,6 +464,7 @@
 				572DE6FE1E9B6F2E00FA6017 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -1,14 +1,24 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="HoI-Do-SfD">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="rene_bieder_galano_grotesque_semibold.otf">
+            <string>GalanoGrotesque-SemiBold</string>
+        </array>
+    </customFonts>
     <scenes>
-        <!--View Controller-->
+        <!--Login View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="LoginViewController" customModule="Boilerplate_auth" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,11 +26,347 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sign in" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c23-Oh-rR5">
+                                <rect key="frame" x="26" y="60" width="323" height="75"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="75" id="gRU-pq-67B"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="GalanoGrotesque-SemiBold" family="Galano Grotesque" pointSize="37"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="email" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="kni-75-QeO" customClass="BorderLessTextField" customModule="Boilerplate_auth" customModuleProvider="target">
+                                <rect key="frame" x="20" y="155" width="335" height="60"/>
+                                <color key="backgroundColor" red="0.054901960780000002" green="0.074509803920000006" blue="0.1019607843" alpha="0.050000000000000003" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="textColor" red="0.89411764709999997" green="0.2784313725" blue="0.25098039220000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="next"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="password" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="E9U-97-t6I" customClass="BorderLessTextField" customModule="Boilerplate_auth" customModuleProvider="target">
+                                <rect key="frame" x="20" y="225" width="335" height="60"/>
+                                <color key="backgroundColor" red="0.94509803920000002" green="0.94509803920000002" blue="0.94509803920000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="0.89411764709999997" green="0.2784313725" blue="0.25098039220000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="go" secureTextEntry="YES"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isPasswordField" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oJy-oq-7Pw" customClass="WeColorButton" customModule="Boilerplate_auth" customModuleProvider="target">
+                                <rect key="frame" x="20" y="305" width="335" height="60"/>
+                                <color key="backgroundColor" red="1" green="0.71764705880000002" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="SZs-4S-5jG"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
+                                <state key="normal" title="Log in"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="darkButton" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="loginButtonClick" destination="BYZ-38-t0r" eventType="touchUpInside" id="Xay-kj-s3a"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a2m-NV-oFK" customClass="SpanButton" customModule="Boilerplate_auth" customModuleProvider="target">
+                                <rect key="frame" x="20" y="385" width="335" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="V9B-bb-zft"/>
+                                </constraints>
+                                <state key="normal" title="Create an account"/>
+                                <connections>
+                                    <segue destination="JoC-k2-scg" kind="show" id="3Oq-fo-8XN"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NL6-Rn-coX" customClass="SpanButton" customModule="Boilerplate_auth" customModuleProvider="target">
+                                <rect key="frame" x="20" y="415" width="335" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="fIY-y2-kqV"/>
+                                </constraints>
+                                <state key="normal" title="Did you forget your password?"/>
+                                <connections>
+                                    <segue destination="9wW-gn-ga8" kind="show" id="nhz-L8-MwQ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IAl-TY-Jss" customClass="WeProviderButton" customModule="Boilerplate_auth" customModuleProvider="target">
+                                <rect key="frame" x="102.5" y="477" width="70" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="PIC-FD-Fvs"/>
+                                    <constraint firstAttribute="width" constant="70" id="os4-B5-OJ2"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="providerName" value="github"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="githubButtonClick" destination="BYZ-38-t0r" eventType="touchUpInside" id="4aH-a4-VIz"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tuX-7t-XtV" customClass="WeProviderButton" customModule="Boilerplate_auth" customModuleProvider="target">
+                                <rect key="frame" x="202.5" y="477" width="70" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="70" id="Spb-w2-qwH"/>
+                                    <constraint firstAttribute="height" constant="60" id="Vmx-12-yOj"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="providerName" value="google"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="googleButtonClick" destination="BYZ-38-t0r" eventType="touchUpInside" id="mdU-QG-2mi"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.99607849120000003" green="0.99215692280000001" blue="0.99215692280000001" alpha="1" colorSpace="deviceRGB"/>
+                        <constraints>
+                            <constraint firstItem="a2m-NV-oFK" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="0kv-Be-lUl"/>
+                            <constraint firstItem="IAl-TY-Jss" firstAttribute="top" secondItem="NL6-Rn-coX" secondAttribute="bottom" constant="42" id="2rT-v4-XmR"/>
+                            <constraint firstItem="NL6-Rn-coX" firstAttribute="leading" relation="lessThanOrEqual" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="3aj-Bi-vkV"/>
+                            <constraint firstItem="kni-75-QeO" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="4Sm-fi-mdR"/>
+                            <constraint firstItem="E9U-97-t6I" firstAttribute="leading" secondItem="kni-75-QeO" secondAttribute="leading" id="7dG-RH-Vgi"/>
+                            <constraint firstItem="E9U-97-t6I" firstAttribute="trailing" secondItem="kni-75-QeO" secondAttribute="trailing" id="8IX-89-ECR"/>
+                            <constraint firstItem="NL6-Rn-coX" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="8hN-os-uJf"/>
+                            <constraint firstAttribute="trailing" secondItem="a2m-NV-oFK" secondAttribute="trailing" constant="20" id="B6b-ah-IeT"/>
+                            <constraint firstItem="kni-75-QeO" firstAttribute="top" secondItem="c23-Oh-rR5" secondAttribute="bottom" constant="20" id="Ic4-rO-9gF"/>
+                            <constraint firstItem="c23-Oh-rR5" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="10" id="OiL-en-WWC"/>
+                            <constraint firstAttribute="trailing" relation="lessThanOrEqual" secondItem="NL6-Rn-coX" secondAttribute="trailing" constant="20" id="U0S-Oo-cOh"/>
+                            <constraint firstItem="kni-75-QeO" firstAttribute="height" secondItem="oJy-oq-7Pw" secondAttribute="height" id="W8F-vd-ZOC"/>
+                            <constraint firstItem="c23-Oh-rR5" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="aKw-BI-k7m"/>
+                            <constraint firstItem="NL6-Rn-coX" firstAttribute="top" secondItem="a2m-NV-oFK" secondAttribute="bottom" constant="10" id="adg-fc-h5f"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="c23-Oh-rR5" secondAttribute="trailing" constant="10" id="bKR-tJ-DeG"/>
+                            <constraint firstItem="c23-Oh-rR5" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="40" id="cz9-xF-MwZ"/>
+                            <constraint firstItem="oJy-oq-7Pw" firstAttribute="top" secondItem="E9U-97-t6I" secondAttribute="bottom" constant="20" id="euy-BW-HyC"/>
+                            <constraint firstItem="a2m-NV-oFK" firstAttribute="top" secondItem="oJy-oq-7Pw" secondAttribute="bottom" constant="20" id="fO6-hP-kSy"/>
+                            <constraint firstItem="oJy-oq-7Pw" firstAttribute="trailing" secondItem="E9U-97-t6I" secondAttribute="trailing" id="fmW-Hk-uOl"/>
+                            <constraint firstItem="E9U-97-t6I" firstAttribute="top" secondItem="kni-75-QeO" secondAttribute="bottom" constant="10" id="jF4-k7-ICR"/>
+                            <constraint firstItem="IAl-TY-Jss" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="-50" id="nXN-rp-CPD"/>
+                            <constraint firstItem="tuX-7t-XtV" firstAttribute="top" secondItem="NL6-Rn-coX" secondAttribute="bottom" constant="42" id="q4N-1E-0SA"/>
+                            <constraint firstItem="E9U-97-t6I" firstAttribute="height" secondItem="oJy-oq-7Pw" secondAttribute="height" id="rTB-Jf-JjP"/>
+                            <constraint firstItem="tuX-7t-XtV" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="50" id="roR-IQ-VUl"/>
+                            <constraint firstItem="oJy-oq-7Pw" firstAttribute="leading" secondItem="E9U-97-t6I" secondAttribute="leading" id="umX-le-hz7"/>
+                            <constraint firstAttribute="trailing" secondItem="kni-75-QeO" secondAttribute="trailing" constant="20" id="yek-4Q-wBq"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="9zV-Gp-sMC"/>
+                    <connections>
+                        <outlet property="emailTextField" destination="kni-75-QeO" id="ajC-bc-Onn"/>
+                        <outlet property="passwordTextField" destination="E9U-97-t6I" id="ejB-Wb-aqk"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="972" y="38.23088455772114"/>
+        </scene>
+        <!--Sign Up View Controller-->
+        <scene sceneID="SSz-oP-u1O">
+            <objects>
+                <viewController id="JoC-k2-scg" customClass="SignUpViewController" customModule="Boilerplate_auth" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="PgK-qg-Cca"/>
+                        <viewControllerLayoutGuide type="bottom" id="0Od-Zk-kEq"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="C4n-HJ-kAB">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sign up" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2zr-TV-pth">
+                                <rect key="frame" x="20" y="60" width="335" height="75"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="75" id="Wb7-pt-TAk"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="GalanoGrotesque-SemiBold" family="Galano Grotesque" pointSize="37"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="name" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="APa-nn-yyy" customClass="BorderLessTextField" customModule="Boilerplate_auth" customModuleProvider="target">
+                                <rect key="frame" x="20" y="155" width="335" height="60"/>
+                                <color key="backgroundColor" red="0.054901960780000002" green="0.074509803920000006" blue="0.1019607843" alpha="0.050000000000000003" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="44T-h4-VsV"/>
+                                </constraints>
+                                <color key="textColor" red="0.89411764709999997" green="0.2784313725" blue="0.25098039220000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="next"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="email" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="SU0-lG-ahc" customClass="BorderLessTextField" customModule="Boilerplate_auth" customModuleProvider="target">
+                                <rect key="frame" x="20" y="225" width="335" height="60"/>
+                                <color key="backgroundColor" red="0.054901960780000002" green="0.074509803920000006" blue="0.1019607843" alpha="0.050000000000000003" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="POm-b4-Qwe"/>
+                                </constraints>
+                                <color key="textColor" red="0.89411764709999997" green="0.2784313725" blue="0.25098039220000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="next"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="haM-vn-Ty4" customClass="WeColorButton" customModule="Boilerplate_auth" customModuleProvider="target">
+                                <rect key="frame" x="20" y="375" width="335" height="60"/>
+                                <color key="backgroundColor" red="1" green="0.71764705880000002" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="nL2-Wf-Spm"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
+                                <state key="normal" title="Log in"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="darkButton" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="signUpButtonClick" destination="JoC-k2-scg" eventType="touchUpInside" id="Klj-8M-Z7e"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="password" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="KFB-cf-wkC" customClass="BorderLessTextField" customModule="Boilerplate_auth" customModuleProvider="target">
+                                <rect key="frame" x="20" y="295" width="335" height="60"/>
+                                <color key="backgroundColor" red="0.94509803920000002" green="0.94509803920000002" blue="0.94509803920000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="0.89411764709999997" green="0.2784313725" blue="0.25098039220000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="go" secureTextEntry="YES"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isPasswordField" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YXA-Sl-U71" customClass="WeBackButton" customModule="Boilerplate_auth" customModuleProvider="target">
+                                <rect key="frame" x="20" y="28" width="30" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="30" id="BC4-ND-idx"/>
+                                    <constraint firstAttribute="height" constant="30" id="vd5-MJ-auP"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="goBack" destination="JoC-k2-scg" eventType="touchUpInside" id="0o8-ht-ZmD"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="KFB-cf-wkC" firstAttribute="trailing" secondItem="APa-nn-yyy" secondAttribute="trailing" id="4ES-cd-GKb"/>
+                            <constraint firstItem="haM-vn-Ty4" firstAttribute="leading" secondItem="APa-nn-yyy" secondAttribute="leading" id="5uE-rr-gd7"/>
+                            <constraint firstItem="SU0-lG-ahc" firstAttribute="top" secondItem="APa-nn-yyy" secondAttribute="bottom" constant="10" id="756-8a-7BZ"/>
+                            <constraint firstItem="SU0-lG-ahc" firstAttribute="leading" secondItem="APa-nn-yyy" secondAttribute="leading" id="8Qe-YE-bKE"/>
+                            <constraint firstItem="APa-nn-yyy" firstAttribute="top" secondItem="2zr-TV-pth" secondAttribute="bottom" constant="20" id="EOs-jx-VQV"/>
+                            <constraint firstItem="YXA-Sl-U71" firstAttribute="leading" secondItem="C4n-HJ-kAB" secondAttribute="leading" constant="20" id="Icp-1J-edE"/>
+                            <constraint firstItem="haM-vn-Ty4" firstAttribute="top" secondItem="KFB-cf-wkC" secondAttribute="bottom" constant="20" id="L48-IF-Ste"/>
+                            <constraint firstItem="YXA-Sl-U71" firstAttribute="top" secondItem="PgK-qg-Cca" secondAttribute="bottom" constant="8" id="MIf-2V-KVW"/>
+                            <constraint firstAttribute="trailing" relation="lessThanOrEqual" secondItem="APa-nn-yyy" secondAttribute="trailing" constant="20" id="O4W-gW-k48"/>
+                            <constraint firstItem="KFB-cf-wkC" firstAttribute="top" secondItem="SU0-lG-ahc" secondAttribute="bottom" constant="10" id="RwA-oG-qlN"/>
+                            <constraint firstItem="haM-vn-Ty4" firstAttribute="trailing" secondItem="APa-nn-yyy" secondAttribute="trailing" id="Thz-1A-kRj"/>
+                            <constraint firstItem="2zr-TV-pth" firstAttribute="leading" secondItem="C4n-HJ-kAB" secondAttribute="leading" constant="20" id="Wyx-k7-f8I"/>
+                            <constraint firstItem="APa-nn-yyy" firstAttribute="centerX" secondItem="C4n-HJ-kAB" secondAttribute="centerX" id="dIY-PT-KhS"/>
+                            <constraint firstItem="KFB-cf-wkC" firstAttribute="leading" secondItem="APa-nn-yyy" secondAttribute="leading" id="e3M-BV-fMh"/>
+                            <constraint firstItem="2zr-TV-pth" firstAttribute="top" secondItem="PgK-qg-Cca" secondAttribute="bottom" constant="40" id="kJ8-BC-vj5"/>
+                            <constraint firstAttribute="trailing" secondItem="2zr-TV-pth" secondAttribute="trailing" constant="20" id="m8w-cI-a8M"/>
+                            <constraint firstItem="APa-nn-yyy" firstAttribute="leading" relation="lessThanOrEqual" secondItem="C4n-HJ-kAB" secondAttribute="leading" constant="20" id="xOn-Cb-ACR"/>
+                            <constraint firstItem="SU0-lG-ahc" firstAttribute="trailing" secondItem="APa-nn-yyy" secondAttribute="trailing" id="xjE-QR-2Oj"/>
+                            <constraint firstItem="KFB-cf-wkC" firstAttribute="height" secondItem="APa-nn-yyy" secondAttribute="height" id="z34-4k-7bC"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="emailTextField" destination="SU0-lG-ahc" id="OVE-oS-AGw"/>
+                        <outlet property="nameTextField" destination="APa-nn-yyy" id="BzK-sg-ukW"/>
+                        <outlet property="passwordTextField" destination="KFB-cf-wkC" id="G8N-zF-HEc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="P6K-wc-Ieu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1856.8" y="-322.48875562218893"/>
+        </scene>
+        <!--Reset Password View Controller-->
+        <scene sceneID="pJg-hv-Xff">
+            <objects>
+                <viewController id="9wW-gn-ga8" customClass="ResetPasswordViewController" customModule="Boilerplate_auth" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="m2o-ox-kyP"/>
+                        <viewControllerLayoutGuide type="bottom" id="aLQ-cw-r2T"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="h29-jk-bOo">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Request a Reset Password Link" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MUT-Eh-f4M">
+                                <rect key="frame" x="39" y="60" width="298" height="136"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="298" id="8Qd-jv-TvU"/>
+                                    <constraint firstAttribute="height" constant="136" id="LfJ-9b-IX2"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="GalanoGrotesque-SemiBold" family="Galano Grotesque" pointSize="37"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yDF-fL-ze9" customClass="WeColorButton" customModule="Boilerplate_auth" customModuleProvider="target">
+                                <rect key="frame" x="20" y="296" width="335" height="60"/>
+                                <color key="backgroundColor" red="1" green="0.71764705880000002" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="wfo-J0-A5x"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
+                                <state key="normal" title="Log in"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="darkButton" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="resetPasswordButtonClick" destination="9wW-gn-ga8" eventType="touchUpInside" id="OEv-iD-2Nm"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="email" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="yss-d4-nwZ" customClass="BorderLessTextField" customModule="Boilerplate_auth" customModuleProvider="target">
+                                <rect key="frame" x="20" y="216" width="335" height="60"/>
+                                <color key="backgroundColor" red="0.054901960780000002" green="0.074509803920000006" blue="0.1019607843" alpha="0.050000000000000003" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="dHP-9O-sXM"/>
+                                </constraints>
+                                <color key="textColor" red="0.89411764709999997" green="0.2784313725" blue="0.25098039220000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="next"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oJ6-pG-rFl" customClass="WeBackButton" customModule="Boilerplate_auth" customModuleProvider="target">
+                                <rect key="frame" x="20" y="28" width="30" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="30" id="4Xd-Dy-HDD"/>
+                                    <constraint firstAttribute="height" constant="30" id="XBR-Z2-ztJ"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="goBack" destination="9wW-gn-ga8" eventType="touchUpInside" id="wQz-BM-F3e"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="yDF-fL-ze9" firstAttribute="leading" secondItem="h29-jk-bOo" secondAttribute="leading" constant="20" id="3sT-8E-qEg"/>
+                            <constraint firstItem="yss-d4-nwZ" firstAttribute="top" secondItem="MUT-Eh-f4M" secondAttribute="bottom" constant="20" id="4vl-Jm-mlU"/>
+                            <constraint firstItem="oJ6-pG-rFl" firstAttribute="leading" secondItem="h29-jk-bOo" secondAttribute="leading" constant="20" id="BqP-vD-0pb"/>
+                            <constraint firstItem="MUT-Eh-f4M" firstAttribute="top" secondItem="m2o-ox-kyP" secondAttribute="bottom" constant="40" id="GAv-1j-lJp"/>
+                            <constraint firstItem="yDF-fL-ze9" firstAttribute="top" secondItem="yss-d4-nwZ" secondAttribute="bottom" constant="20" id="NlE-pV-TPb"/>
+                            <constraint firstItem="MUT-Eh-f4M" firstAttribute="centerX" secondItem="h29-jk-bOo" secondAttribute="centerX" id="bav-ui-G4C"/>
+                            <constraint firstItem="oJ6-pG-rFl" firstAttribute="top" secondItem="m2o-ox-kyP" secondAttribute="bottom" constant="8" id="cPr-0W-UiQ"/>
+                            <constraint firstAttribute="trailing" relation="lessThanOrEqual" secondItem="yss-d4-nwZ" secondAttribute="trailing" constant="20" id="fAl-wn-gON"/>
+                            <constraint firstItem="yss-d4-nwZ" firstAttribute="leading" relation="lessThanOrEqual" secondItem="h29-jk-bOo" secondAttribute="leading" constant="20" id="j5U-aB-Qmb"/>
+                            <constraint firstAttribute="trailing" secondItem="yDF-fL-ze9" secondAttribute="trailing" constant="20" id="j5W-RJ-whs"/>
+                            <constraint firstItem="yss-d4-nwZ" firstAttribute="centerX" secondItem="h29-jk-bOo" secondAttribute="centerX" id="pNb-wl-9ed"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="emailTextField" destination="yss-d4-nwZ" id="S1Y-4v-Gbr"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HXS-SQ-255" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1864.8" y="329.68515742128938"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="yv4-86-6iI">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="HoI-Do-SfD" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="HnU-1o-xBN">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="CMh-dt-ZuD"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="efz-E5-gZe" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="32.799999999999997" y="38.23088455772114"/>
         </scene>
     </scenes>
 </document>
