@@ -33,9 +33,30 @@ class LoginViewController: BaseViewController {
 			.toCallback { auth, error in
 				self.handleLoginResult(auth: auth, error: error)
 			}
+		
+		// You can do it using promises :)
+		//WeDeploy.auth(authUrl)
+		//	.signInWith(username: username, password: password)
+		//	.then { auth in
+		//
+		//	}
+		//	.catch { error in
+		//
+		//	}
+		//
+		// Or RxSwift
+		//WeDeploy.auth(authUrl)
+		//	.signInWith(username: username, password: password)
+		//	.toObservable().subscribe(onNext: { auth in
+		//
+		//	 },
+		//	 onError: { error in
+		//
+		//	})
 	}
 	
 	@IBAction func githubButtonClick() {
+		// Check AppDelegate.swift
 		let provider = AuthProvider(provider: .github, redirectUri: "my-app://")
 		
 		WeDeploy.auth(authUrl)

@@ -21,11 +21,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 	var window: UIWindow?
 
 	func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-		// Override point for customization after application launch.
+		
 		return true
 	}
 	
 	func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey : Any] = [:]) -> Bool {
+		// You have to declare a url schema for your application and call
+		// this method here if you want to do 3rd party sign in
+		// Check the documentation for more details 
+		// http://wedeploy.com/docs/auth/sign-in-with-github.html
 		WeDeploy.auth("auth.boilerplate-auth.wedeploy.io").handle(url: url)
 		
 		return true
