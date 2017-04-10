@@ -36,4 +36,8 @@ class BaseViewController: UIViewController {
 		
 		present(alert, animated: true, completion: nil)
 	}
+	
+	@IBAction func goBack() {
+		self.navigationController?.popViewController(animated: true)
+	}
 }
