@@ -12,13 +12,28 @@
 * details.
 */
 
+
 import UIKit
 
-class ViewController: UIViewController {
-
+class BaseViewController: UIViewController {
+	
+	let authUrl = "auth.boilerplate-auth.wedeploy.io"
+	
 	override func viewDidLoad() {
 		super.viewDidLoad()
-		// Do any additional setup after loading the view, typically from a nib.
+		let tapGesture = UITapGestureRecognizer(target: self, action: #selector(handleScreenTap))
+		view.addGestureRecognizer(tapGesture)
+	}
+	
+	func handleScreenTap() {
+		view.endEditing(true)
+	}
+	
+	func showAlert(with title: String, message: String) {
+		let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+		let action = UIAlertAction(title: "Ok", style: .cancel, handler: nil)
+		alert.addAction(action)
+		
+		present(alert, animated: true, completion: nil)
 	}
 }
-
