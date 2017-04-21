@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	>
+	<data>
+		<import type="com.wedeploy.boilerplate_auth.binding.Font"/>
+	</data>
+
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:gravity="center|top"
+		android:orientation="vertical"
+		>
+
+		<TextView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_marginTop="80dp"
+			android:layout_marginBottom="40dp"
+			android:text="Sign In"
+			android:textAppearance="@style/WeTextAppearance.Large"
+			/>
+
+
+		<EditText
+			android:id="@+id/email"
+			android:layout_width="match_parent"
+			android:layout_height="60dp"
+			android:layout_margin="10dp"
+			android:hint="@string/email"
+			android:inputType="textEmailAddress"
+			/>
+
+		<EditText
+			android:id="@+id/password"
+			android:layout_width="match_parent"
+			android:layout_height="60dp"
+			android:layout_margin="10dp"
+			android:layout_marginTop="40dp"
+			android:hint="@string/password"
+			android:inputType="textPassword"
+			/>
+
+		<Button
+			android:id="@+id/login"
+			android:layout_width="match_parent"
+			android:layout_height="60dp"
+			android:layout_margin="10dp"
+			android:text="@string/submit"
+			android:textColor="@android:color/white"
+			/>
+
+		<TextView
+			android:id="@+id/go_to_sign_up"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_marginTop="10dp"
+			android:text="@string/create_account"
+			android:textAlignment="center"
+			android:textColor="@color/colorAccent"
+			/>
+
+		<TextView
+			android:id="@+id/go_to_forgot_password"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_marginTop="10dp"
+			android:text="@string/did_you_forget_your_password"
+			android:textAlignment="center"
+			android:textColor="@color/colorAccent"
+			/>
+
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:orientation="horizontal"
+			android:gravity="center"
+			android:layout_marginTop="20dp"
+			>
+
+			<Button
+				android:id="@+id/githubSignIn"
+				android:layout_width="88dp"
+				android:layout_height="48dp"
+				android:text=""
+				android:textColor="@android:color/white"
+				android:textSize="24sp"
+				app:backgroundTint="@color/social_github_button_background"
+				app:font="@{Font.ICONS_12}"
+				/>
+
+			<Button
+				android:id="@+id/googleSignIn"
+				android:layout_width="88dp"
+				android:layout_height="48dp"
+				android:layout_marginLeft="12dp"
+				android:text=""
+				android:textColor="@android:color/white"
+				android:textSize="24sp"
+				app:backgroundTint="@color/social_google_button_background"
+				app:font="@{Font.ICONS_12}"
+				/>
+
+		</LinearLayout>
+
+
+	</LinearLayout>
+
+</layout>
+
