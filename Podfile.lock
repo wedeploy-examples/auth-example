@@ -10,31 +10,22 @@ PODS:
     - PromiseKit/CorePromise
   - PromiseKit/UIKit (4.1.7):
     - PromiseKit/CorePromise
-  - RxSwift (3.3.1)
-  - Socket.IO-Client-Swift (8.3.0)
-  - WeDeploy (0.3.0):
+  - RxSwift (3.4.0)
+  - Socket.IO-Client-Swift (8.3.3)
+  - WeDeploy (0.4.0):
     - PromiseKit (~> 4.0)
     - RxSwift (~> 3.0)
     - Socket.IO-Client-Swift (~> 8.1)
 
 DEPENDENCIES:
-  - WeDeploy (from `https://github.com/victorg1991/api-swift`)
-
-EXTERNAL SOURCES:
-  WeDeploy:
-    :git: https://github.com/victorg1991/api-swift
-
-CHECKOUT OPTIONS:
-  WeDeploy:
-    :commit: e955a892e4ae4c6d69200ed05368b020ffbd7b7a
-    :git: https://github.com/victorg1991/api-swift
+  - WeDeploy
 
 SPEC CHECKSUMS:
   PromiseKit: 779f2e41faf62d854e7593026ddbcb0bb5c5002d
-  RxSwift: 8fc9f2de6275a9101d518444e00bf32f1a42caac
-  Socket.IO-Client-Swift: 7ad3aded3c0f74d99555e950ac3aa82ca3eefbaf
-  WeDeploy: 43c7ad1c9cba1b83e0c1f46ea3eb65017b4bd4c8
+  RxSwift: 3789a1af753002a14edecdb698a2424624296a9c
+  Socket.IO-Client-Swift: a2faffdbde89c63aebc5d631041530c1068b02b8
+  WeDeploy: f1c38fb1113748356e72b3bf1162d31438dfc2aa
 
-PODFILE CHECKSUM: 2c9584e4afcca0dbdf0062f9a1ec717a7f5d8a9d
+PODFILE CHECKSUM: f8e420bc7fd04652d50a09f13ef78918b29289d3
 
 COCOAPODS: 1.2.0
