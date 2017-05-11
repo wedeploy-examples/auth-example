@@ -5,9 +5,9 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Toast;
+import com.wedeploy.android.Callback;
+import com.wedeploy.android.transport.Response;
 import com.wedeploy.boilerplate_auth.databinding.SignUpActivityBinding;
-import com.wedeploy.sdk.Callback;
-import com.wedeploy.sdk.transport.Response;
 
 public class SignUpActivity extends BaseActivity {
 
@@ -36,29 +36,26 @@ public class SignUpActivity extends BaseActivity {
 
 				if (!name.isEmpty() && !email.isEmpty() && !password.isEmpty()) {
 					doSignUp(name, email, password);
-				}
-				else {
-					Toast.makeText(SignUpActivity.this,
-						"You have to fill all the fields", Toast.LENGTH_SHORT).show();
+				} else {
+					Toast.makeText(SignUpActivity.this, "You have to fill all the fields",
+						Toast.LENGTH_SHORT).show();
 				}
 			}
 		});
 	}
 
 	private void doSignUp(String name, String email, String password) {
-		weDeploy.auth(AUTH_URL)
-			.createUser(email, password, name)
-			.execute(new Callback() {
-				@Override
-				public void onSuccess(Response response) {
-					showAlert("Success", "Signed up successfully");
-				}
+		weDeploy.auth(AUTH_URL).createUser(email, password, name).execute(new Callback() {
+			@Override
+			public void onSuccess(Response response) {
+				showAlert("Success", "Signed up successfully");
+			}
 
-				@Override
-				public void onFailure(Exception e) {
-					Log.e("", e.toString());
-					showAlert("Error", "Sign up error");
-				}
-			});
+			@Override
+			public void onFailure(Exception e) {
+				Log.e("", e.toString());
+				showAlert("Error", "Sign up error");
+			}
+		});
 	}
 }

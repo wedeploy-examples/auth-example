@@ -6,9 +6,9 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Toast;
+import com.wedeploy.android.Callback;
+import com.wedeploy.android.transport.Response;
 import com.wedeploy.boilerplate_auth.databinding.ForgotPasswordActivityBinding;
-import com.wedeploy.sdk.Callback;
-import com.wedeploy.sdk.transport.Response;
 
 public class ForgotPasswordActivity extends BaseActivity {
 

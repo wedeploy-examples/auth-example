@@ -4,7 +4,7 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
-import com.wedeploy.sdk.WeDeploy;
+import com.wedeploy.android.WeDeploy;
 
 /**
  * @author Víctor Galán Grande
