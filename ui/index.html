@@ -5,12 +5,12 @@
 	<title>Sign In</title>
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,700">
 	<link rel="stylesheet" href="main.css">
-	<script src="http://cdn.wedeploy.com/api/latest/wedeploy.js"></script>
+	<script src="https://cdn.wedeploy.com/api/2.3.1/wedeploy.js"></script>
 </head>
 <body>
 	<form name="signIn" class="container" onsubmit="signInWithEmailAndPassword(); return false;">
 		<div class="btn-container">
-			
+
 			<!--
 				To enable login with Github/Google setup the following environment variables inside auth/container.json:
 					WEDEPLOY_AUTH_GITHUB_CLIENT_ID, WEDEPLOY_AUTH_GITHUB_CLIENT_SECRET
@@ -44,7 +44,7 @@
 	<img class="logo" src="logo.png" width="150" alt="WeDeploy">
 
 	<script>
-		var auth = WeDeploy.auth('auth.boilerplate-auth.wedeploy.io');
+		var auth = WeDeploy.auth('auth-boilerplateauth.wedeploy.io');
 
 		function signInWithEmailAndPassword() {
 			auth.signInWithEmailAndPassword(signIn.email.value, signIn.password.value)

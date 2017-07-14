@@ -5,7 +5,7 @@
 	<title>Request a Reset Password Link</title>
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,700">
 	<link rel="stylesheet" href="main.css">
-	<script src="http://cdn.wedeploy.com/api/latest/wedeploy.js"></script>
+	<script src="https://cdn.wedeploy.com/api/2.3.1/wedeploy.js"></script>
 </head>
 <body>
 	<form name="resetLink" class="container" onsubmit="submitForm(); return false;">
@@ -20,7 +20,7 @@
 
 	<script>
 		function submitForm() {
-			WeDeploy.auth('auth.boilerplate-auth.wedeploy.io')
+			WeDeploy.auth('auth-boilerplateauth.wedeploy.io')
 				.sendPasswordResetEmail(resetLink.email.value)
 				.then(function() {
 					alert('Reset password link was sent to ' + resetLink.email.value);
