@@ -1,4 +1,6 @@
-# WeDeploy Auth [![Badge](https://img.shields.io/badge/built%20with-wedeploy-00d46a.svg?style=flat)](http://wedeploy.com)
+[![Deploy](https://cdn.wedeploy.com/images/deploy.svg)](https://console.wedeploy.com/deploy?repo=https://github.com/wedeploy-examples/auth-example)
+
+# WeDeploy Auth
 
 An example of [WeDeploy Auth](https://wedeploy.com/docs/auth/).
 
